@@ -4,9 +4,7 @@ import com.ecommerce.warehouse.entity.ProductEntity;
 
 import java.util.UUID;
 
-public interface IProductService {
+public interface IProductQueryService {
 
-    ProductEntity save(final ProductEntity entity);
-
-    void purchase(final UUID id);
+    ProductEntity findById(final UUID id);
 }

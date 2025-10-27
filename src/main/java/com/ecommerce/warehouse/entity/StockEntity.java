@@ -39,6 +39,10 @@ public class StockEntity {
     @JoinColumn(name = "product_id", nullable = false)
     private ProductEntity product;
 
+    public boolean isUnavailable() {
+        return status == StockStatus.UNAVAILABLE;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
